@@ -4,7 +4,7 @@
 			Ethan Hotz - A Personal Project Page
 		</title>
 	<link rel="stylesheet" href="../stylesheet.css">
-	<!--<script src=""></script>-->
+	<script src="probabilityScript.js"></script>
 	</head>
 	<body>
 		<div class="header">
@@ -21,8 +21,23 @@
 			</div>
 		</div>
 		<div class="mainBody">
-		Probability Table Utility - enter table data and receive probability distributions of outcomes
-			
+			Probability Table Utility - This was made to test dice roll outcomes over time, given a table input.
+			<table id="diceTable0" class="table">
+				<tr>
+					<td>Roll result</td>
+					<td>Effect</td>
+					<td>Effect Die Roll</td>
+				</tr>
+				<tr id="inputRow">
+					<td><input type="text" id="firstColMinRollInput" size="1">-<input type="text" id="firstColMaxRollInput" size="1"> </td>
+					<td><input type="text" id="effectInput"> </td>
+					<td><input type="text" id="firstColMinRollInput" size="1">d<input type="text" id="firstColMaxRollInput" size="1"> </td>
+				</tr>
+			</table>
+			<button type="button" id="addRowButton" onClick="addRow()">Add Row</button>
+			</br>
+			</br>
+			<button type="button" id="calculateButton" onClick="calculateTotals()">Calculate Totals</button>
 		</div>
 	</body>
 </html>
